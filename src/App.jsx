@@ -15,7 +15,7 @@ export const App = () => {
       <Image src='https://rb.gy/zzx2tl' h='80px' my={6} />
       <InputSearch />
       <Navigation />
-      <IconButton variant='unstyled' mt={8} mb={16} as={Link} href='https://google.com' isExternal>
+      <IconButton variant='unstyled' mt={8} mb={16} as={Link} href='https://github.com/Eibeel/viewerRickAndMorty' isExternal>
         <Image src='https://rb.gy/hvaqr9' h='32px' opacity='.4' />
       </IconButton>
     </Wrapper>
