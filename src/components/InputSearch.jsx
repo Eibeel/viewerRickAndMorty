@@ -23,6 +23,8 @@ export const InputSearch = () => {
     dispatch(setAuth(''))
   }
 
+  const authStorage = localStorage.getItem('email')
+
   return (
     <Flex w={{ base: 'auto', md: 'container.md' }} alignItems='center' columnGap={6} mb={6}>
       <InputGroup>
@@ -37,7 +39,7 @@ export const InputSearch = () => {
         </InputRightElement>
       </InputGroup>
       {
-        auth
+        auth || authStorage
           ? <Button size='md' colorScheme='red' onClick={onLogout}>Logout</Button>
           : <FormLayout />
       }
