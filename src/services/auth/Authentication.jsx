@@ -6,7 +6,6 @@ import useAuth from '../../hooks/useAuth'
 export const Authentication = ({ Close }) => {
   const [show, setShow] = useState(false)
   const handleClick = () => setShow(!show)
-
   const data = {
     email: '',
     password: ''
