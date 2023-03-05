@@ -9,8 +9,9 @@ Colección de personajes de la famosa serie Rick And Morty. Visualiza personajes
 
 ## Stack
 - React
+- Custom Hooks
 - Chakra UI
 - Redux / Toolkit
 - Axios
 
-### [@Eibeel](https://github.com/Eibeel)
+### With 💙 - [@Eibeel](https://github.com/Eibeel) 
