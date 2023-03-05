@@ -6,6 +6,7 @@ import useAuth from '../hooks/useAuth'
 import { FormLayout } from '../services/auth/FormLayout'
 import { getCharacterAction } from '../store/viewer'
 import { setAuth } from '../store/viewer/viewerSlice'
+import { Favorites } from './Favorites'
 
 export const InputSearch = () => {
   const [query, setQuery] = useState('')
@@ -27,6 +28,11 @@ export const InputSearch = () => {
 
   return (
     <Flex w={{ base: 'auto', md: 'container.md' }} alignItems='center' columnGap={6} mb={6}>
+      {
+        auth || authStorage
+          ? <Favorites />
+          : ''
+      }
       <InputGroup>
         <Input
           placeholder='Search a character'

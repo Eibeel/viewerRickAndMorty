@@ -16,6 +16,7 @@ export const CharacterView = () => {
             thumbnail={character.image}
             origin={character.origin.name}
             locationName={character.location.name}
+            id={character.id}
           />
         ))
       }

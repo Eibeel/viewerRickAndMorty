@@ -10,7 +10,7 @@ import {
 import { ModalCard } from './ModalCard'
 import PropTypes from 'prop-types'
 
-export const CharacterCard = ({ thumbnail, name, status, specie, gender, origin, locationName }) => {
+export const CharacterCard = ({ thumbnail, name, status, specie, gender, origin, locationName, id }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
@@ -21,9 +21,11 @@ export const CharacterCard = ({ thumbnail, name, status, specie, gender, origin,
       xs={6}
     >
       <Image src={thumbnail} h='180px' w='180px' borderRadius='4px 4px 0 0' />
-      <VStack py={4} spacing={4}>
-        <Text textAlign='center'>{name}</Text>
-        <Button onClick={onOpen} size='sm' variant='ghost' color='#6B46C1'>View more</Button>
+      <Text textAlign='center' py={4}>{name}</Text>
+      <VStack pb={4} spacing={0}>
+        <Button onClick={onOpen} size='sm' variant='ghost' color='#6B46C1'>
+          View more
+        </Button>
       </VStack>
 
       <Modal isOpen={isOpen} onClose={onClose} isCentered size='xs'>
@@ -37,6 +39,7 @@ export const CharacterCard = ({ thumbnail, name, status, specie, gender, origin,
           thumbnail={thumbnail}
           Open={isOpen}
           Close={onClose}
+          id={id}
         />
       </Modal>
     </Box>
@@ -50,5 +53,6 @@ CharacterCard.propTypes = {
   specie: PropTypes.node.isRequired,
   gender: PropTypes.node.isRequired,
   origin: PropTypes.node.isRequired,
-  locationName: PropTypes.node.isRequired
+  locationName: PropTypes.node.isRequired,
+  id: PropTypes.node.isRequired
 }
